@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<!--node`s params-->
+	<arg name="argtemplate" 				default="0"/>
+
+<!--launch nodes-->
+
+	<node pkg="can_rockchip" type="can_rockchip" name="rockchip" output="screen"/>
+    <node pkg="socketcan_bridge" type="topic_to_socketcan_node" name="topic_to_socketcan_node"/>
+    <node pkg="socketcan_bridge" type="socketcan_to_topic_node" name="socketcan_to_topic_node"/>
+		
+</launch>
